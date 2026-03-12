@@ -89,7 +89,9 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
+		  ref: master  
           submodules: recursive
+		  fetch-depth: 0 
 
       - name: Restore bridge files
         uses: actions/download-artifact@master
