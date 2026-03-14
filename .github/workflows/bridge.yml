@@ -64,7 +64,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: /tmp/flutter_rust_bridge
-          key: vcpkg-${{ matrix.job.arch }}
+          key: vcpkg-${{ matrix.job.arch }}-${{ hashFiles('libs/hbb_common/**') }}
 
       - name: Install flutter
         uses: subosito/flutter-action@v2

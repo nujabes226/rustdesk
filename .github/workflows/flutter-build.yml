@@ -93,13 +93,11 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-    #暂时注释掉下面这部分
-    # - name: Restore bridge files
-    #   uses: actions/download-artifact@master
-    #   with:
-    #     name: bridge-artifact
-    #     path: ./
-    #  暂时注释掉上面这部分
+      - name: Restore bridge files
+        uses: actions/download-artifact@master
+        with:
+          name: bridge-artifact
+          path: ./
 
       - name: Install LLVM and Clang
         uses: KyleMayes/install-llvm-action@v1
